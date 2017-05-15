@@ -1,0 +1,11 @@
+Sposobów na zakoñczenie pracy programu w C# jest wiele. 
+
+1. Application.Current.Shutdown();
+Dzia³a bardzo szybko, ale gdy w programie dzia³a jakiœ w¹tek (Thread), którego nie potrafimy zatrzymaæ przed zakoñczeniem, to lepiej u¿yæ nastêpnych przyk³adów, poniewa¿ w tym przyk³adzie w¹tki dalej bêd¹ dzia³aæ po zamkniêciu programu.
+
+2. Environment.Exit();
+W tym wypadku wszelkie w¹tki zostan¹ zatrzymane i program siê wy³¹czy, lecz w przypadku programów z du¿¹ liczb¹ w¹tków, mo¿e to trwaæ kilka sekund.
+
+3. System.Diagnostics.Process.GetCurrentProcess().Kill();
+Dzia³a bardzo szybko i skutecznie, poniewa¿ si³owo zabija proces tak jak za pomoc¹ polecenia z CMD.
+

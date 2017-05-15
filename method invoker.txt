@@ -1,0 +1,4 @@
+
+
+
+lbHosts.Invoke(new MethodInvoker(delegate { lbHosts.Items.Add("Start a scan ..."); }));
